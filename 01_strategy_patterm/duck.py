@@ -30,8 +30,13 @@ class MallardDuck(Duck):
     def __init__(self) -> None:
         super().__init__(fly_behavior=FlyWithWings(), quack_behavior=Quack())
 
+    def display(self):
+        print("water")
 
 class RubberDuck(Duck):
 
     def __init__(self) -> None:
         super().__init__(fly_behavior=FlyNoWay(), quack_behavior=MuteQuack())
+
+    def display(self):
+        print("rubber")
