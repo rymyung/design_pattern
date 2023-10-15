@@ -7,14 +7,14 @@
 classDiagram
     Duck <|-- MallardDuck
     Duck <|-- RubberDuck
-    FlyBehavior <.. Duck
+    FlyBehavior <-- Duck
     <<interface>> FlyBehavior
-    FlyBehavior <|-- FlyWithWings
-    FlyBehavior <|-- FlyNoWay
-    QuackBehavior <.. Duck
+    FlyBehavior <|.. FlyWithWings
+    FlyBehavior <|.. FlyNoWay
+    QuackBehavior <-- Duck
     <<interface>> QuackBehavior
-    QuackBehavior <|-- Quack
-    QuackBehavior <|-- MuteQuack
+    QuackBehavior <|.. Quack
+    QuackBehavior <|.. MuteQuack
     namespace Client {
         class Duck{
             FlyBehavior flybehavior
